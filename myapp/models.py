@@ -17,14 +17,20 @@ class Customer(models.Model):
     phone = models.CharField(max_length=15)
     date_created = models.DateTimeField(auto_now_add=True)
 
-<<<<<<< HEAD
+    """
+      by defining name_and_email, we define a variable that is then displayed in def __str__
+    """
+
+    def name_and_emaiL(self):
+        return f"{self.name} ({self.email})"
+
     """ 
         def __str__(self): defines what will be displayed as the title on django admin page, eg
         a product on the django admin page will consist of {self.name} and {self..price}
     """
 
     def __str__(self):
-        return f"{self.name} ({self.email})"
+        return self.name_and_emaiL()
     
 
 """
