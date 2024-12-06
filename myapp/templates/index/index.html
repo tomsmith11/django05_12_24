@@ -1,0 +1,28 @@
+<html lang="en">
+  <h1>This is a list of every product</h1>
+  <ul>
+    <!-- 
+     {% for product in products %} is just a loop. 
+     eg % for numberofproducts in productsVariable
+     this section of code will create a list.item (<li>) for
+     every product.
+    -->
+    {% for product in products %}
+    <li>{{ product.name }}</li>
+    {% endfor %}
+  </ul>
+
+  <!-- 
+      this will create a list.item for every customer. this is for the
+      sake of education so never actually do this since obviously you dont
+      want to display the details of every user on your site 
+  -->
+
+  <h1>This is a list of every Customer</h1>
+  <ul>
+    {% for customer in customers %}
+    <li>{{ customer.name }}</li>
+    {% endfor %}  
+</html>
+
+

@@ -1,3 +1,6 @@
+from django.urls import path, include
+from .views import index
+
 """
 URL configuration for django05_12_24 project.
 
@@ -17,6 +20,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+"""
+   creating new path which displays index variable from views.py
+   and also creating path to the admin page
+"""
+
 urlpatterns = [
+    path('', views.index, name='home'),
     path('admin/', admin.site.urls),
 ]
